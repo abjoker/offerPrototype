@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">offerPrototype</string>
+    <string name="initial">Offer</string>
+    <string name="your_offers">Your Offers</string>
+    <string name="list">Options</string>
+    <string name="saved">Saved Offers</string>
+    <string name="sign_in">Sign-in</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="detail">16/18 Shop No. 3 Vasant Kunj, New Delhi \n Contact +91-87660644</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_main3">Main3Activity</string>
+
+    <string name="title_activity_fullscreen_fragment1">fullscreen_fragment1</string>
+
+    <string name="title1">ABC Fashion Store 45% Off</string>
+    <string name="dueDate1">Offers available till March 21 </string>
+    <string name="address1">offerPrototype</string>
+    <string name="title2">offerPrototype</string>
+    <string name="dueDate2">offerPrototype</string>
+    <string name="address2">offerPrototype</string>
+</resources>

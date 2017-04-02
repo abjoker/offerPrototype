@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Categories">
+
+    <group android:checkableBehavior="single"
+        >
+        <menu>
+        <item
+            android:id="@+id/apparel"
+            android:title="Apparel" />
+        <item
+            android:id="@+id/electronics"
+            android:title="Electronics" />
+        <item
+            android:id="@+id/grocery"
+            android:title="Grocery" />
+        </menu>
+    </group>
+
+    </item>
+<group android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/location_based_search"
+        android:icon="@drawable/ic_place_black_24dp"
+        android:title="Enable Location based search" />
+        <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/rate_us"
+                android:icon="@drawable/ic_rate_review_black_24dp"
+                android:title="Rate us" />
+
+
+</group>
+</menu>
