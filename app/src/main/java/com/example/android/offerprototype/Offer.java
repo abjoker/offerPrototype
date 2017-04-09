@@ -10,22 +10,22 @@ import static android.os.Build.VERSION_CODES.N;
 
 public class Offer{
     private static final int NO_IMAGE_RESOURCE=-1;
-    private String oTitle;
-    private String oDueDate;
-    private String oAddress;
+    private int oTitle;
+    private int oDueDate;
+    private int oAddress;
     private int oResourceId=NO_IMAGE_RESOURCE;
 
     public Offer(){}
-    public Offer(String t,String d,String a,int rId){
+    public Offer(int t,int d,int a,int rId){
         oTitle=t;
         oDueDate=d;
         oAddress=a;
         oResourceId=rId;
     }
 
-    public String getTitle(){return oTitle;}
-    public String getDueDate(){return oDueDate;}
-    public String getAddress(){return oAddress;}
+    public int getTitle(){return oTitle;}
+    public int getDueDate(){return oDueDate;}
+    public int getAddress(){return oAddress;}
 
     public int getResourceId(){return oResourceId;}
     public boolean hasImage(){
