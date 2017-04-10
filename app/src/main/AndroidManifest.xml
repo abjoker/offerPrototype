@@ -23,7 +23,8 @@
             android:parentActivityName="com.example.android.offerprototype.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".The_List"
-            android:label="Available Stores"/>
+            android:label="Available Stores"
+            />
     </application>
 
 </manifest>
