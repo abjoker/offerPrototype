@@ -20,15 +20,15 @@ public class The_List extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_for_list);
-        final ArrayList<Info> arrayList=new ArrayList<>();
-        arrayList.add(new Info("The Plaza"));
-        arrayList.add(new Info("The Mall"));
-        arrayList.add(new Info("A shop"));
-        arrayList.add(new Info("A Place"));
-        arrayList.add(new Info("Second Floor"));
-        arrayList.add(new Info("An Outlet"));
+        final ArrayList<Info> arraylist=new ArrayList<>();
+        arraylist.add(new Info("The Plaza"));
+        arraylist.add(new Info("The Mall"));
+        arraylist.add(new Info("A shop"));
+        arraylist.add(new Info("A Place"));
+        arraylist.add(new Info("Second Floor"));
+        arraylist.add(new Info("An Outlet"));
                 listView=(ListView)findViewById(R.id.layout_for_list);
-                infoAdapter=new TheListAdapter(this,arrayList);
+                infoAdapter=new TheListAdapter(this,arraylist);
                 listView.setAdapter(infoAdapter);
         Log.i(LOG_TAG,"Text: ListView created");
 

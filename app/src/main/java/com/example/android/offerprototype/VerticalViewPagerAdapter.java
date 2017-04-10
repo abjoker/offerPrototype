@@ -2,13 +2,12 @@ package com.example.android.offerprototype;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -16,15 +15,7 @@ import android.widget.TextView;
 /**
  * Created by asha on 28-03-2017.
  */
-
-
-
 import java.util.ArrayList;
-
-
-/**
- * Created by rizvan on 12/13/16.
- */
 
 public class VerticalViewPagerAdapter extends PagerAdapter {
 
@@ -33,16 +24,16 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
     LayoutInflater mLayoutInflater;
     ArrayList<Offer> arrayListinPager=new ArrayList<>();
 
-    public VerticalViewPagerAdapter(Context context, ArrayList<Offer> arrayList) {
+    public VerticalViewPagerAdapter(Context context, ArrayList<Offer> arraylist) {
         mContext = context;
         mLayoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        arrayListinPager=arrayList;
+        arrayListinPager=arraylist;
     }
 
     //The Changes begin from here..
     @Override
     public int getCount() {
-        return 12;
+        return arrayListinPager.size()*10;
     }
 
     @Override
@@ -65,19 +56,24 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
             tAddress.setText(offer.getAddress());
             imageView.setImageResource(offer.getResourceId());
 
-        ImageView info = (ImageView) itemView.findViewById(R.id.info);
+        ImageView info = (ImageView) itemView.findViewById(R.id.info3);
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                {
-                    Intent intent = new Intent(mContext.getApplicationContext(), The_List.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    mContext.startActivity(intent);
+            public void onClick(View v){
+
+
+                        Intent intent = new Intent(mContext, The_List.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        mContext.startActivity(intent);
+
                 }
 
-            }
+
         });
+
+
+
         ImageView back = (ImageView) itemView.findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
