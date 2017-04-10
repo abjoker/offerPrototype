@@ -99,16 +99,16 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
 //        });
 
 
-//        LinearLayout linearLayout=(LinearLayout) itemView.findViewById(R.id.complete_view);
-//        linearLayout.setOnTouchListener(new OnSwipeTouchListener(mContext.getApplicationContext()) {
-//
-//            public void onSwipeLeft() {
-//                Intent intent =new Intent(mContext.getApplicationContext(),The_List.class);
-//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                mContext.startActivity(intent);
-//            }
-//
-//        });
+        LinearLayout linearLayout=(LinearLayout) itemView.findViewById(R.id.complete_view);
+        linearLayout.setOnTouchListener(new OnSwipeTouchListener(mContext.getApplicationContext()) {
+
+            public void onSwipeLeft() {
+                Intent intent =new Intent(mContext.getApplicationContext(),The_List.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mContext.startActivity(intent);
+            }
+
+        });
 
 
         container.addView(itemView);

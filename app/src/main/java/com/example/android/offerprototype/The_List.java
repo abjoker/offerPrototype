@@ -32,15 +32,15 @@ public class The_List extends AppCompatActivity {
                 listView.setAdapter(infoAdapter);
         Log.i(LOG_TAG,"Text: ListView created");
 
-        //ListView linearLayout=(ListView) findViewById(R.id.layout_for_list);
-//        listView.setOnTouchListener(new OnSwipeTouchListener(The_List.this) {
-//
-//            public void onSwipeRight() {
-//                Intent intent =new Intent(The_List.this,Main2Activity.class);
-//                startActivity(intent);
-//            }
-//
-//
-//        });
+        ListView linearLayout=(ListView) findViewById(R.id.layout_for_list);
+        listView.setOnTouchListener(new OnSwipeTouchListener(The_List.this) {
+
+            public void onSwipeRight() {
+                Intent intent =new Intent(The_List.this,Main2Activity.class);
+                startActivity(intent);
+            }
+
+
+        });
     }}
 
