@@ -43,7 +43,6 @@ import android.view.ViewParent;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
-
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
