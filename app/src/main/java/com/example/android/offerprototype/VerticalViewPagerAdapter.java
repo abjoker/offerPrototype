@@ -69,7 +69,8 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
                         Intent intent = new Intent(mContext, The_List.class);
 
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        mContext.startActivity(intent);
+
+                mContext.startActivity(intent);
 
                 }
 
