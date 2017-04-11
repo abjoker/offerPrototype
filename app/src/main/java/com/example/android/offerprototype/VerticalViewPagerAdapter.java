@@ -44,12 +44,14 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(final ViewGroup container, final int position) {
         View itemView = mLayoutInflater.inflate(R.layout.content_main2, container, false);
-        Offer offer= arrayListinPager.get(position%4);
+        final Offer offer= arrayListinPager.get(position%4);
 
         TextView tTitle = (TextView) itemView.findViewById(R.id.title);
         TextView tDueDate = (TextView) itemView.findViewById(R.id.due_date);
         TextView tAddress = (TextView) itemView.findViewById(R.id.address);
         ImageView imageView = (ImageView) itemView.findViewById(R.id.offer_pic);
+
+
 
         tTitle.setText(offer.getTitle());
             tDueDate.setText(offer.getDueDate());
@@ -62,9 +64,11 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
             @Override
             public void onClick(View v){
 
-
+                The_List the_list=new The_List();
+                the_list.get_The_List(offer.getInfoList());
                         Intent intent = new Intent(mContext, The_List.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         mContext.startActivity(intent);
 
                 }
@@ -80,6 +84,7 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(mContext.getApplicationContext(),MainActivity.class);
+
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
 
@@ -103,6 +108,8 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
         linearLayout.setOnTouchListener(new OnSwipeTouchListener(mContext.getApplicationContext()) {
 
             public void onSwipeLeft() {
+                The_List the_list=new The_List();
+                the_list.get_The_List(offer.getInfoList());
                 Intent intent =new Intent(mContext.getApplicationContext(),The_List.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
