@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class Main2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener  {
     public ArrayList<Offer> arrayList;
+    public ArrayList<Info> InfoList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +48,11 @@ public class Main2Activity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
+
         arrayList=new ArrayList<>();
         arrayList.add(new Offer(R.string.title1,R.string.dueDate1,R.string.detail,R.drawable.fashion1));
-        arrayList.add(new Offer(R.string.title1,R.string.dueDate1,R.string.detail,R.drawable.image_search_1489686086143));
-        arrayList.add(new Offer(R.string.title1,R.string.dueDate1,R.string.detail,R.drawable.image_search_1489686107285));
-        arrayList.add(new Offer(R.string.title1,R.string.dueDate1,R.string.detail,R.drawable.image_search_1489686140224));
-        arrayList.add(new Offer(R.string.title1,R.string.dueDate1,R.string.detail,R.drawable.fashion1));
+        arrayList.add(new Offer(R.string.title2,R.string.dueDate2,R.string.detail2,R.drawable.image_search_1489686086143));
 
         initSwipePager();
 

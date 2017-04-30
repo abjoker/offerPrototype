@@ -1,7 +1,10 @@
 package com.example.android.offerprototype;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.PagerAdapter;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,10 +18,12 @@ import android.widget.TextView;
 /**
  * Created by asha on 28-03-2017.
  */
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 
 public class VerticalViewPagerAdapter extends PagerAdapter {
-
+    View.OnClickListener mOnClickListener;
 
     Context mContext;
     LayoutInflater mLayoutInflater;
@@ -33,7 +38,7 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
     //The Changes begin from here..
     @Override
     public int getCount() {
-        return arrayListinPager.size()*10;
+        return arrayListinPager.size()*2;
     }
 
     @Override
@@ -44,7 +49,7 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(final ViewGroup container, final int position) {
         View itemView = mLayoutInflater.inflate(R.layout.content_main2, container, false);
-        final Offer offer= arrayListinPager.get(position%4);
+        final Offer offer= arrayListinPager.get(position%2);
 
         TextView tTitle = (TextView) itemView.findViewById(R.id.title);
         TextView tDueDate = (TextView) itemView.findViewById(R.id.due_date);
@@ -63,16 +68,14 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-
-                The_List the_list=new The_List();
-                the_list.get_The_List(offer.getInfoList());
-                        Intent intent = new Intent(mContext, The_List.class);
-
+                Intent intent = new Intent(mContext.getApplicationContext(), The_List.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
                 mContext.startActivity(intent);
+                ((Activity) mContext).overridePendingTransition( R.anim.your_right_to_left,R.anim.your_left_to_right);
 
-                }
+
+            }
 
 
         });
@@ -93,27 +96,63 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
             }
         });
 
-//        ImageView top = (ImageView) itemView.findViewById(R.id.back_to_top);
-//
-//        top.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//          instantiateItem(container,0);
-//
-//            }
-//        });
+       final ImageView star = (ImageView) itemView.findViewById(R.id.add_favourite);
 
+        star.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(star.getSolidColor()!= Color.CYAN)
+                {star.setColorFilter(Color.CYAN);
+                    Snackbar snackbar = Snackbar
+                            .make(star, "You marked it as favourite", Snackbar.LENGTH_LONG)
+                            .setAction("Undo",mOnClickListener);
+                    snackbar.setActionTextColor(Color.WHITE);
+                    View snackbarView = snackbar.getView();
+                    snackbarView.setBackgroundColor(Color.DKGRAY);
+                    TextView textView = (TextView) snackbarView.findViewById(android.support.design.R.id.snackbar_text);
+                    textView.setTextColor(Color.YELLOW);
+                    snackbar.show();
+
+                }
+                else
+                star.setColorFilter(Color.WHITE);
+
+
+
+
+            }
+        });
+
+        ImageView share = (ImageView) itemView.findViewById(R.id.share);
+
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent =new Intent(mContext.getApplicationContext(),MainActivity.class);
+//
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                mContext.startActivity(intent);
+
+                String msg=offer.getTitle()+"\n"+offer.getAddress();
+                Intent i=new Intent(android.content.Intent.ACTION_SEND);
+                i.setType("text/plain");
+                i.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject test");
+                i.putExtra(android.content.Intent.EXTRA_TEXT, msg);
+                mContext.startActivity(Intent.createChooser(i,"Share via"));
+            }
+        });
 
         LinearLayout linearLayout=(LinearLayout) itemView.findViewById(R.id.complete_view);
         linearLayout.setOnTouchListener(new OnSwipeTouchListener(mContext.getApplicationContext()) {
 
             public void onSwipeLeft() {
-                The_List the_list=new The_List();
-                the_list.get_The_List(offer.getInfoList());
+
                 Intent intent =new Intent(mContext.getApplicationContext(),The_List.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
                 mContext.startActivity(intent);
+                ((Activity) mContext).overridePendingTransition( R.anim.your_right_to_left,R.anim.your_left_to_right);
+
+
             }
 
         });

@@ -57,22 +57,22 @@
                 </FrameLayout>
 
 
-                <FrameLayout
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_margin="22dp">
+                <!--<FrameLayout-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_margin="22dp">-->
 
-                    <ImageView
-                        android:id="@+id/back_to_top"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:contentDescription="@null"
-                        android:src="@drawable/ic_arrow_upward_black_24dp"
+                    <!--<ImageView-->
+                        <!--android:id="@+id/back_to_top"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:contentDescription="@null"-->
+                        <!--android:src="@drawable/ic_arrow_upward_black_24dp"-->
 
-                        />
-                </FrameLayout>
+                        <!--/>-->
+                <!--</FrameLayout>-->
 
 
                 <FrameLayout

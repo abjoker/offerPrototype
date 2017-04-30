@@ -19,12 +19,16 @@
         <!-- android:label="@string/title_activity_fullscreen_fragment1" -->
         <activity
             android:name=".Main2Activity"
-            android:label="@string/title_activity_main2"
             android:parentActivityName="com.example.android.offerprototype.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar">
+
+
+            </activity>
         <activity android:name=".The_List"
-            android:label="Available Stores"
+            android:label="Available Stores Near You"
             />
+
+
     </application>
 
 </manifest>

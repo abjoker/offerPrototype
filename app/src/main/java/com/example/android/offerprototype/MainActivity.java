@@ -18,7 +18,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        if (actionBar!=null)
+            actionBar.hide();
         Button options  =(Button) findViewById(R.id.B1);
 
         options.setOnClickListener(new View.OnClickListener(){
@@ -30,41 +32,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton myOffer = (ImageButton) findViewById(R.id.google);
+        TextView skip  =(TextView) findViewById(R.id.t1);
 
-        myOffer.setOnClickListener(new View.OnClickListener() {
+        skip.setOnClickListener(new View.OnClickListener(){
+
             @Override
-            public void onClick(View v) {
-                Uri webpage = Uri.parse("https://accounts.google.com/ServiceLogin?passive=1209600&osid=1&continue=https://plus.google.com/apps/activities&followup=https://plus.google.com/apps/activities");
-                Intent intent =new Intent(Intent.ACTION_VIEW, webpage);
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                startActivity(intent);}
+            public void onClick(View v){
+                Intent intent =new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent);
             }
         });
-
-        ImageButton myOffer2 = (ImageButton) findViewById(R.id.twitter);
-
-        myOffer2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri webpage = Uri.parse("https://twitter.com/login");
-                Intent intent =new Intent(Intent.ACTION_VIEW, webpage);
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);}
-            }
-        });
-
-        ImageButton myOffer3 = (ImageButton) findViewById(R.id.facebook);
-
-        myOffer3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri webpage = Uri.parse("https://en-gb.facebook.com/login/");
-                Intent intent =new Intent(Intent.ACTION_VIEW, webpage);
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);}
-            }
-        });
-
 
 }}

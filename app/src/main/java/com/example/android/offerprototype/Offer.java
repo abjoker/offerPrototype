@@ -2,6 +2,8 @@ package com.example.android.offerprototype;
 
 import android.widget.ArrayAdapter;
 
+import java.util.ArrayList;
+
 import static android.os.Build.VERSION_CODES.N;
 
 /**
@@ -14,6 +16,7 @@ public class Offer{
     private int oDueDate;
     private int oAddress;
     private int oResourceId=NO_IMAGE_RESOURCE;
+//    public ArrayList<Info> arraylist=new ArrayList<>();
 
     public Offer(){}
     public Offer(int t,int d,int a,int rId){
@@ -21,6 +24,7 @@ public class Offer{
         oDueDate=d;
         oAddress=a;
         oResourceId=rId;
+
     }
 
     public int getTitle(){return oTitle;}
@@ -28,7 +32,8 @@ public class Offer{
     public int getAddress(){return oAddress;}
 
     public int getResourceId(){return oResourceId;}
-    public boolean hasImage(){
-        return oResourceId!=NO_IMAGE_RESOURCE;
-    }
+//    public ArrayList<Info> getInfoList(){return arraylist;}
+//    public boolean hasImage(){
+//        return oResourceId!=NO_IMAGE_RESOURCE;
+
 }

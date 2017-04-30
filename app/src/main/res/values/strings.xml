@@ -7,7 +7,7 @@
     <string name="sign_in">Sign-in</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="detail">16/18 Shop No. 3 Vasant Kunj, New Delhi \n Contact +91-87660644</string>
-
+    <string name="detail2">16/18 Floor-2. Pacific Mall, New Delhi \n Contact +91-85858599</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -20,10 +20,10 @@
 
     <string name="title_activity_fullscreen_fragment1">fullscreen_fragment1</string>
 
-    <string name="title1">ABC Fashion Store 45% Off</string>
-    <string name="dueDate1">Offers available till March 21 </string>
+    <string name="title1">ABC Fashion Store 45% off</string>
+    <string name="dueDate1">Offers available till May 17 </string>
     <string name="address1">offerPrototype</string>
-    <string name="title2">offerPrototype</string>
-    <string name="dueDate2">offerPrototype</string>
+    <string name="title2">XYZ Fashion Store 45% off</string>
+    <string name="dueDate2">Offers available till May 21</string>
     <string name="address2">offerPrototype</string>
 </resources>
