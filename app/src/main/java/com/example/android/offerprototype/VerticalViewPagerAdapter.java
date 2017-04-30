@@ -133,7 +133,7 @@ public class VerticalViewPagerAdapter extends PagerAdapter {
 //                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //                mContext.startActivity(intent);
 
-                String msg=offer.getTitle()+"\n"+offer.getAddress();
+                String msg=mContext.getResources().getString(offer.getTitle())+"\n"+mContext.getResources().getString(offer.getAddress());
                 Intent i=new Intent(android.content.Intent.ACTION_SEND);
                 i.setType("text/plain");
                 i.putExtra(android.content.Intent.EXTRA_SUBJECT,"Subject test");

@@ -25,12 +25,12 @@ public class The_List extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_for_list);
         ArrayList<Info> arraylist=new ArrayList<>();
-        arraylist.add(new Info("The Plaza",12));
+        arraylist.add(new Info("The Plaza",1));
         arraylist.add(new Info("The Mall",6));
         arraylist.add(new Info("A shop",8));
         arraylist.add(new Info("A Place",10));
         arraylist.add(new Info("Second Floor",14));
-        arraylist.add(new Info("An Outlet",7));
+        arraylist.add(new Info("An Outlet",17));
         listView=(ListView)findViewById(R.id.layout_for_list);
         infoAdapter=new TheListAdapter(this,arraylist);
         listView.setAdapter(infoAdapter);
